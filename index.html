@@ -1,0 +1,135 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>1110331040 陳繹仁WEB作業</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" style="height:200vw;">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>陳繹仁1110331040</h1>
+							<p>WEB 程式作業</a></p>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="images/mypic2.jpg" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section id="first" style="height:500px;">
+						<header>
+							<h2>2019(108年)作業、課堂練習</h2>
+						</header>
+						<div class="content">
+							<br>
+							<p><strong> <a href="work/ex00.html">課堂練習 : Hello 名字 </a></strong> &nbsp;</p>
+							<br>
+							<p><strong> <a href="work/ex01.html">1.溫度轉換 </a></strong> &nbsp;-- 02/27</p>
+							Html QuickView:
+							<div id="example-8" style="padding-left:150px;">
+								攝氏<input v-model.number="firstNumber" type="number" step="1" style="width:50px;" >度 = {{ result }} 度華氏
+								<p>	<animated-integer v-bind:value="firstNumber"></animated-integer>℃= <animated-integer v-bind:value="result"></animated-integer>℉
+							  </p>
+							</div>
+							<br>
+							<p><strong> <a href="work/ex02.html">2.比大小 </a></strong> &nbsp;-- 03/08</p>
+							<br>
+							<p><strong> <a href="work/ex04.php">課堂練習 : 取得變數類型 </a></strong> &nbsp;</p>
+							<br>
+							<p><strong> <a href="work/ex03.html">3.輸入1~7，回傳相對應日期  </a></strong> &nbsp;-- 03/13</p>
+							<br>
+							<p><strong> <a href="work/ex05.html">4.輸入n值，求sum(n)=1+...+n  </a></strong> &nbsp;</p>
+							<br>
+							<p><strong> <a href="work/ex06.html">5.輸入基本資料 </a></strong> &nbsp;-- 03/20</p>
+							<br>
+							<p><strong> <a href="work/myprofile/index.html">6.單欄式網頁 </a></strong> &nbsp;-- 03/27</p>
+							<br>
+							<p><strong> <a href="work/ex07.html">7.數字順序調換 </a></strong> &nbsp;-- 04/03</p>
+						</div>
+					</section>
+
+				
+
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/tween.js@16.3.4"></script>
+			<script>
+			Vue.component('animated-integer', {
+			  template: '<span>{{ tweeningValue }}</span>',
+			  props: {
+				value: {
+				  type: Number,
+				  required: true
+				}
+			  },
+			  data: function () {
+				return {
+				  tweeningValue: 0
+				}
+			  },
+			  watch: {
+				value: function (newValue, oldValue) {
+				  this.tween(oldValue, newValue)
+				}
+			  },
+			  mounted: function () {
+				this.tween(0, this.value)
+			  },
+			  methods: {
+				tween: function (startValue, endValue) {
+				  var vm = this
+				  function animate () {
+					if (TWEEN.update()) {
+					  requestAnimationFrame(animate)
+					}
+				  }
+
+				  new TWEEN.Tween({ tweeningValue: startValue })
+					.to({ tweeningValue: endValue }, 500)
+					.onUpdate(function () {
+					  vm.tweeningValue = this.tweeningValue.toFixed(0)
+					})
+					.start()
+
+				  animate()
+				}
+			  }
+			})
+
+			new Vue({
+			  el: '#example-8',
+			  data: {
+				firstNumber: 23
+			  },
+			  computed: {
+				result: function () {
+				  //return this.firstNumber + this.secondNumber
+				  
+				  return this.firstNumber *(9/5)+32;
+				}
+			  }
+			})
+			</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

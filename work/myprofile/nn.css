@@ -1,0 +1,151 @@
+.profile{
+	margin: auto;
+    width: 70%;
+    padding: 20px;
+	box-shadow:4px 4px 4px 4px rgba(20%,20%,40%,0.5);
+	height:4100px;
+}
+.main{
+	height:350px;
+    width:100%;
+	float:left;
+	position:relative;
+    min-height:1px;
+    overflow: hidden;
+}
+.text-center{
+    text-align:center;
+}
+.content .profile img{
+    width:150px;
+    margin-bottom:-5px;
+}
+.hrmid {
+	width:50%;
+	border:0px; 
+	height:1.5px; 
+	background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(232,232,232,1), rgba(0,0,0,0));
+}
+.hrauto {
+	margin-bottom:5px;
+	width:80%;
+	border:0px; 
+	background-image: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,1), rgba(0,0,0,0.3));
+}
+h1{
+	font-weight: bold;
+	font-family: Abel, "微軟正黑體", sans-serif;
+}
+h3{
+	color: #e0e0e0;
+	font-size: 12px; 
+	letter-spacing: normal;
+}
+.col-sm-12{
+        width:100%;
+}
+#bgimg{
+	border: 0px solid;
+	background-image:url(bg.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	width:69vw;
+    height:350px;
+    font-size-adjust: auto;
+}
+.intro{
+    width:100%;
+	float:left;
+	position:relative;
+    min-height:1px;
+	margin-bottom:30px;
+}
+.int{
+	font-size:16px;
+	font-family: cairo , "微軟正黑體", sans-serif;
+}
+.smallbt{
+    content: " ";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    text-align:center;
+    display: inline-block;
+    background-color: #a8a8a8;
+    margin-top: 10px;
+    margin-left: -1px;
+    margin-bottom:-12px;
+    z-index: 1;
+}
+.col-left{
+    float:left;
+    width:49.5% ;
+    border:0px solid;
+    height:750px;
+}
+.col-right{
+    float:left;
+    width:300px;
+    border:0px solid;
+    height:750px;
+}
+.col-left .box-left{
+    margin-left:20px;
+    width:300px; 
+    text-align: left;
+}
+.col-right .box-left{
+    margin-left:20px;
+    width:300px;
+    text-align:left;   
+}
+
+
+/* Circle  Process */
+
+.loading{
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    background-color: #FFF;
+    float: left;
+}
+.progress{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130px;
+    height: 130px;
+    transform: translate(-50%,-50%);
+    color:  black;
+    line-height: 130px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+.left,.right{
+    float: left;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.left span,.right span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:  gainsboro;
+    transition: all 0.4s;
+}
+.left span{				
+    border-radius:150px 0 0 150px; 	
+    transform-origin: right;
+    
+}
+.right span{
+    border-radius:0 150px 150px 0;
+    transform-origin: left;
+    transform : rotate(0deg);
+}

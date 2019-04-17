@@ -1,0 +1,26 @@
+﻿<html lang="en">
+    <head>
+    <meta charset = "utf-8">
+    </head>
+    <body>
+        <form action ="ex06.php">
+			<h1>輸入表單</h1>
+            學號: <input type="text" name="schoolnum"><br>
+			姓名: <input type="text" name="name"><br>
+			性別: <input type="radio" name="sex" value="男生"/> 男生 <input type="radio" name="sex" value="女生" /> 女生 </br>
+
+			手機: <input type="text" name="phone"><br>
+			擅長運動: <input type="checkbox" name="sport[]" value="羽球" /> 羽球
+				<input type="checkbox" name="sport[]" value="籃球" /> 籃球
+				<input type="checkbox" name="sport[]" value="桌球" /> 桌球
+				<input type="checkbox" name="sport[]" value="直排輪" /> 直排輪
+				</br>
+
+			郵件: <input type="email" name="mail"><br>
+			
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+			<input type ="button" onclick="history.back()" value="Back"></input>
+        </form>
+    </body>
+</html>
